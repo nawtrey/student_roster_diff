@@ -1,19 +1,19 @@
-================
-==== README ====
-================
+Student Roster Diff
+===================
+
+Naive work-around code for automating student rosters.
 
 File Setup
 ----------
 For each course, store the original rosters along with the updated rosters
 together in a common directory named after the course (e.g. PHY114), allowing
 Windows to alter the filenames automatically. For example, for a course with
-a course ID of 98765, the following file names would be:
+a course ID of `98765`, the original roster's file name would be `1234-98765.csv`,
+and the _newer_ roster would be saved as `1234-98765(1).csv`.
 
-  Original -- 1234-98765.csv
-  Updated --- 1234-98765(1).csv
-
-This will compare these 2 .csv files and return a .csv highlighting
+This will compare these 2 `.csv` files and return a `.csv` highlighting
 the differences between the two rosters.
+
 
 Running the Executable
 ----------------------
@@ -26,6 +26,8 @@ with all of their relevant info.
 
 Generating the Executable
 -------------------------
-With pyinstaller installed, run:
+With `pyinstaller` installed, run:
 
+```
   pyinstaller student_roster_diff.py -F
+```
